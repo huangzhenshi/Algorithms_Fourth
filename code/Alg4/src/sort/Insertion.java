@@ -16,6 +16,18 @@ public class Insertion extends Example implements SortInterface{
 				}
 		}
 	}
+	
+	public  void sortParty(int[] arr,int startIndex,int endIndex){
+		int size=endIndex-startIndex+1;
+		//注意插入排序的i 是小于startIndex+size
+		for(int i=startIndex+1;i<startIndex+size;i++){
+			int j=i;
+				while(j>startIndex&&less(arr[j],arr[j-1])){
+					exch(arr,j,j-1);
+					j--;
+				}
+		}
+	}
 
 	@Override
 	public void sortCount(int[] arr) {

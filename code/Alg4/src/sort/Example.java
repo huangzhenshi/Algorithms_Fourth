@@ -114,7 +114,7 @@ public class Example {
 			exa.sort(arr);
 		}
 		//检查每次排序后的数组是否有序
-		/*System.out.println("isSort result: "+isSorted(arr));*/
+		System.out.println("isSort result: "+isSorted(arr));
 		long cost=util.getCost();
 		return cost;
 	}
@@ -137,7 +137,7 @@ public class Example {
 		//最大size 10000个
 		while(size<=(MAX_SIZE/20)){
 			System.out.println("this time  the arrSize is: "+size);
-			testAveCost(sort,size,1000,isCount);
+			testAveCost(sort,size,5,isCount);
 			size+=grow;
 			count=0;
 			exchCount=0;
